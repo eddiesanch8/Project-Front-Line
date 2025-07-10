@@ -7,6 +7,52 @@
 }
 
 /* Navbar styling */
+header {
+  background-color: aliceblue; 
+}
+
+.tabs__ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 4rem;
+    grid-template-areas: "col1 col2 col3 col4 col5 col6";
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs__li--1{
+  grid-area: col1;
+}
+
+.tabs__li--2{
+  grid-area: col2;
+}
+
+.tabs__li--3{
+  grid-area: col3;
+}
+
+.tabs__li--4{
+  grid-area: col4;
+}
+
+.tabs__li--5{
+  grid-area: col5;
+}
+
+.tabs__li--6{
+  grid-area: col6;
+} 
+
+.tabs__li {
+  font-size: 1rem;
+  vertical-align: middle;
+  text-align: center;
+    grid-template-rows: 4rem;
+  vertical-align: middle;
+}
+
 
 /* Footer Styling */
 
