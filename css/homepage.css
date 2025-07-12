@@ -1,0 +1,165 @@
+.separate__hr {
+  border-top: 3px solid #d51414;
+  border-radius: 5px;
+  width: 100%;
+  align-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mission__section {
+    padding: 30px;
+    height: 12rem;
+    display: flexbox;
+}
+
+.mission__h1 {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    text-wrap: flex;
+    font-size: xx-large;
+}
+
+.mission__p {
+    margin-bottom: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+    text-wrap: flex;
+    font-size: 20px;
+}
+
+.stat__section {
+    padding: 30px;
+    height: 15rem;
+    display: flexbox;
+}
+
+.stathead__h3 {
+    text-align: center;
+    padding-bottom: 35px;
+    font-size: x-large;
+    text-wrap: flex;
+}
+
+.stat__div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2rem;
+    grid-template-areas: "col1 col2 col3";
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.stat__p {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-wrap: flex;
+    padding: 10px;
+}
+
+.statDesc__p {
+    font-weight: 700;
+    text-align: center;
+    text-wrap: flex;
+    padding-bottom: 10px;
+ }
+
+.texas__section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.texasimage__img {
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.texas__h2 {
+    text-align: center;
+    padding: 15px;
+    text-wrap: flex;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #17556D;
+}
+
+.texas__p {
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    text-wrap: flex;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #17556D;
+}
+
+.texas__button {
+    align-items: center;
+    position: absolute;
+    height: 3rem;
+    width: 10rem;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: #17556D;
+    background-color: #17556D;
+    color: white;
+    border-radius: 5px;
+}
+
+.texas__button:hover {
+    background-color: whitesmoke;
+    color: #D42F2F;
+    border-color: #D42F2F;
+}
+
+.maillist__section {
+    padding: 50px;
+}
+
+.maillist__h2 {
+    text-align: center;
+    text-wrap: flex;
+}
+
+.maillist__p {
+    text-align: center;
+    padding-bottom: 30px;
+    font-weight: 700;
+    text-wrap: flex;
+}
+
+input {
+    align-items: center;
+}
+
+.maillist__input {
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
+
+.maillist__button {
+    height: 2rem;
+    width: 3rem;
+    border-radius: 5px;
+    border-color:#17556D;
+    background-color: #17556D;
+}
+
+.maillist__button:hover {
+    background-color: whitesmoke;
+    color: #D42F2F;
+    border-color:#D42F2F;
+
+}

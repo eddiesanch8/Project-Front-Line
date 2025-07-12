@@ -8,17 +8,18 @@
 
 /* Navbar styling */
 header {
-  background-color: aliceblue; 
+  background-color: #17556D; 
 }
 
 .tabs__ul {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 4rem;
+    grid-template-rows: 8rem;
     grid-template-areas: "col1 col2 col3 col4 col5 col6";
     justify-content: space-between;
     align-items: center;
+    font-size: 50px;
 }
 
 .tabs__li--1{
@@ -27,6 +28,7 @@ header {
 
 .tabs__li--2{
   grid-area: col2;
+  font-size: 50px;
 }
 
 .tabs__li--3{
@@ -49,10 +51,32 @@ header {
   font-size: 1rem;
   vertical-align: middle;
   text-align: center;
-    grid-template-rows: 4rem;
+  grid-template-rows: 4rem;
   vertical-align: middle;
 }
 
+.headerimg__li {
+  vertical-align: bottom;
+  bottom: 30px;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #D42F2F;
+  color: white;
+;
+}
 
 /* Footer Styling */
 
