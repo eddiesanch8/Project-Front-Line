@@ -1,0 +1,22 @@
+.alert-banner {
+    font-size: 1.2rem;
+    background-color: #f6b80f;
+    padding: .8rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.alert-banner__inner {
+  white-space: nowrap;
+  animation: scroll 30s linear infinite; 
+  display: flex;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%); 
+  }  
+  to {
+    transform: translateX(-100%); 
+  }
+}
