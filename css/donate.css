@@ -1,0 +1,234 @@
+.donate__main{
+
+    display: grid;
+    margin-top: 1rem;
+    grid-template-rows: 1fr .7fr 2fr;
+    grid-template-areas:" banner "
+                        " message "
+                        " donate "
+    ;
+}
+
+
+/* banner with image */
+.hero{
+
+    grid-area: banner;
+    font-size: 1.5rem;
+    background-color: blueviolet;
+    
+}
+
+
+.message{
+    grid-area: message;
+    background-color: bisque;
+    padding: .5em;
+}
+
+.message__heading{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.message__para{
+
+    color:#7a7a7a;
+}
+
+.message__para--2{
+
+    color:#7a7a7a;
+    margin-top:.5rem;
+}
+
+
+
+
+/* Donation Section, starting with container*/
+.donations{
+
+    grid-area: donate; 
+    /* background-color: rgba(118, 201, 234, 0.715); */
+
+}
+
+/* .donate__form{
+
+    display: flex;
+
+} */
+
+.form-tab{
+
+    display: flex;
+    justify-content: space-between;
+    font-size: .7rem;
+    width: 100%;
+    margin: 5% 0;
+}
+
+.form-tab h2{
+/* 
+    display: inline-block; */
+}
+
+
+/* first form section */
+
+.donate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donate__group{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.donate__group label,
+.donate__group input {
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 70%;
+    height: 20%;
+    margin: 20px;
+    border: 1px solid #CCC;
+    padding: 5% 5%;
+    cursor: pointer;
+    border-radius: 1.2em;
+
+}
+
+.donate__group input[type="radio"] 
+{
+
+    display:none;
+
+}
+
+
+.donate__group label:hover {
+
+    background-color: #7a7a7a;
+}
+
+.donate__group input[type="radio"]:checked + label {
+
+    background-color: rgb(134, 34, 34);
+
+}
+
+
+
+
+
+/* payment options */
+.option{
+
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+    padding: .5em;
+    align-items: center;
+
+
+}
+
+
+.nav-btns{
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 30rem;
+
+}
+
+
+.option__btn{
+    border-style: none;
+    margin-top: .5rem;
+    width: 50%;
+    background-color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 1px solid #AFAAAA;
+    color: #17556D;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.option__btn:hover,
+.option__btn:focus{
+
+    border: 2px solid #D42F2F;
+    transform: scale(.97);
+}
+
+.option__btn--back{
+
+    margin: 0 15%;
+
+}
+
+.option__btn--next{
+
+    margin: 0 15%;
+}
+
+/* payment details */
+.payment{
+
+    display:flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+    padding: .5em;
+}
+.payment input{
+
+    margin: 10px 0 ; 
+    max-width: 30rem;
+
+}
+
+.payment__heading{
+
+   margin: 2rem 0;
+}
+
+.payment .payment__cvv{
+
+    max-width: 20%;
+
+}
+
+
+.active{
+
+    display: block;
+}
+
+
+.hidden{
+
+    display: none;
+}
+
+
+
+
+
+/* 
+@media screen and (min-width:300px){
+
+
+} */
