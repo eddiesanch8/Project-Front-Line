@@ -5,48 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Volunteer</title>
     <link rel="stylesheet" href="../css/shared.css" />
+    <link rel="stylesheet" href="../css/volunteer.css">
   </head>
   <body>
-      <nav>
-        <!-- Eddie's nav bar-->
+    <header>
+      <nav class="tabs__nav">
+        <ul class="tabs__ul">
+          <li class="tabs__li tabs__li--1"><a href="newsletter/newsletter.html">Newsletter</a></li>
+          <li class="tabs__li tabs__li--2"><a href="about/about.html">About Us</a></li>
+          <li class="tabs__li tabs__li--3"><a href="volunteer/volunteer.html">Volunteer</a></li>
+          <li class="tabs__li tabs__li--4"><a href="donate/donate.html">Donate</a></li>
+          <li class="tabs__li tabs__li--5">Something</li>
+          <li class="tabs__li tabs__li--6">Something2</li>
+        </ul>
       </nav>
-  
-      <header>
-              <a href="#volunteer" class="cta__link">
-          <h1 class="cta__title">Join us at the front line. Volunteer Today</h1> </a>
       </header>
-      
-      <section class="h1__section1">
-        <img src="./images/disaster_relief.jpeg" alt="Volunteer helping child">
-        <h1>Together we can provide relief</h1>
+  
+      <section class="container__section container__section--cta">
+              <a href="#volunteer">
+          <h1 class="cta__title">Join us at the front line, Volunteer Today</h1> </a>
       </section>
       
-      <section class="h2__section2">
-        <h2>Why Volunteer?</h2>
-        <p>
-          The frequency and intensity of disasters is increasing and often the individuals affected are disproportionately those who live in rural areas, have preexisting medical conditions, and are low income. Communities like those in Asheville, NC or Camp Mystic, Texas who suffered from the Kerr County floods are still in the eye of the storm and are in need of your help. By mobilizing you, our first responders and veterans, we can strive to give back.  
+      <section class="container__section container__section--relief">
+        <h1 class="relief__h1">Together, we can provide relief</h1>
+      </section>
+      
+      <section class="container__section container__section--why">
+        <h2 class="why__h2">Why Volunteer?</h2>
+        <p class="textbox__p">
+          The frequency of natural disasters is increasing and often those affected are disproportionately individuals who live in rural areas, have preexisting medical conditions, and are of low income. Communities like those in Asheville, NC or Camp Mystic, Texas are still in the eye of the storm and are in need of your help. By mobilizing you, our first responders and veterans, we can strive to give back.  
         </p>
       </section>
 
-      <section class="learn__section3">
+      <section class="container__section container__section--learn">
         <h2>Learn More</h2>
-        <p> Your information is always safe with us. Have questions? Call us at 704.557.4478</p>
+        <p> Your information is always safe with us.<br> Have questions? Call us at 704.557.4478</p>
       </section>
 
-      <section id="form">
-      <h2>Contact Information:</h2>
+      <section id="form" class="container__section container__section--form">
+      <h2 class="contact__form">Contact Information:</h2>
       <form class="volunteer__form" id="volunteer">
-        <label for="name">Name: </label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email"><br>
-        <label for="phone">Phone Number:</label><br>
-        <input type="text" id="phone" name="phone"><br>
+        <input type="text" id="name" name="name" placeholder="First name:"><br>
+        <input type="text" id="email" name="email" placeholder="Email:"><br>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number:"><br>
         <input type="submit" value="submit">
       </form>
       </section>
 
-      <footer>
+      <footer class="container__section container__section--footer">
         <p> Contact Info | Social Media Links </p>
       </footer>
 
