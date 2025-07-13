@@ -5,88 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>donate</title>
     <link rel="stylesheet" href="../css/shared.css" />
+     <link rel="stylesheet" href="../css/donate.css">
   </head>
   <body>
-      
-    <!-- Nav TBD -->
+
+    
 
     <main class="donate__main">
 
-      <header class="hero__banner">
+      <header class="hero" >
         <figure class="hero__figure">
           <img class="hero__img" src="" alt="firefighters are helping local communities">
         </figure>
         <figcaption class="hero__caption">Picture provided by CC</figcaption>
-          <h1 class="hero__heading"> Your donation Matters</h1>
-          <article class="hero__article">
-            <p>Over the past 10 years, your contributions have led to over...</p>
-            <p>We managed to mobilize and.. Any dollar counts and goes towards ensuring that we can provide real-time results </p>
-          </article>
       </header>
+
+      <article class="message">
+        <h1 class="message__heading"> Your donation Matters</h1>
+        <p class="message__para">The disaster relief fund supports our volunteers and community organizers who are on the front line of these natural disasters. Your contributions over the past 10 years have led to more lives saved, communities rebuilt, and first-responders assisted. </p>
+        <p class="message__para message__para--2">Last year alone, we impacted over 2.6 million people. As we enter hurricane season in 2025, it's only with your support that we can impact millions more this year, can we count on you? </p>
+      </article>
 
           <!-- Image with a header -->
 
 
-
-
         <!-- This is for choosing your donation  -->
-      <section class="donate__section">
-        <form class="donate__form">
-          <button class="donate__btn" type="button"> 100 </button>
-          <button class="donate__btn" type="button"> 500 </button>
-          <button class="donate__btn" type="button"> 1,000 </button>
-          <button class="donate__btn donate__btn--next" type="submit"> Donate </button>
-        </form>
-      </section>
+  <section class="donations">
+      <form class="donate__form">
+
+          <section class="donate hidden">
+            <div class="form-tab">
+              <h2 class="form-tab__donate">Donate</h2> 
+              <h2 class="form-tab__type">Payment Type</h2> 
+              <h2 class="form-tab__details">Payment Details</h2> 
+            </div>
+
+              
+              <h3 class="donate__para">Choose a one-time amount</h3>
+             
+              <div class="donate__group">
+
+                  <input type="radio" id="amount-50" name="amount" value="50">
+                  <label for="amount-50">$50</label>
+                
+                  <input type="radio" id="amount-100" name="amount" value="100" checked="checked">
+                  <label for="amount-100">$100</label>
+               
+                 
+                  <input type="radio" id="amount-500" name="amount" value="500">
+                  <label for="amount-500">$500</label>
+                
+                  <input type="radio" id="amount-other" name="amount" pattern="[0-9]{4}">
+                  <label for="amount-other">Other</label>
+                  <input type="text" id="amount-other" name="otherAmount" pattern="[0-9]{4}">
+
+        
+              <button class="donate__btn donate__btn--next" type="button"> Donate </button>
+            </div>
+          </section>
 
         <!-- Choosing Form of Payment -->
-      <section class="option__section">
-        <form class="option__form">
+      <section class="option hidden">
+
+          <div class="form-tab">
+            <h2 class="form-tab__donate">Donate</h2> 
+            <h2 class="form-tab__type">Payment Type</h2> 
+            <h2 class="form-tab__details">Payment Detials</h2> 
+          </div>
+
           <button class="option__btn" type="button"> Debit </button>
           <button class="option__btn" type="button"> Paypal </button>
           <button class="option__btn" type="button"> Google </button>
+
+          <div class="nav-btns">
+          <button class="option__btn option__btn--back" type="submit"> Back </button>
           <button class="option__btn option__btn--next" type="submit"> Continue </button>
-        </form>
+          </div>
       </section>
 
         <!-- This is the payment section -->
 
-    <section class="payment__section">
-        <form class="payment__form">
-          <h3> Personal info </h3>
-            <label class="payment__label">First Name</label>
-            <input type="">
-            <label>M.</label>
-            <input type="">
-            <label>Last Name</label>
-            <input type="">
-            <label>Email</label>
-            <input type="">
+    <section class="payment ">
 
-          <h3> Billing Information</h3>
-            <label>Address</label>
-            <input type="">
-            <label>Address Line 2</label>
-            <input type="">
+
+        <h4 class="payment__heading"> Personal info </h3>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+            <label for="user-email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" >Email</label>
+            <input type="email" id="user-email"required>
+
+          <h4 class="payment__heading"> Billing Information</h3>
+            <label for="address-1">Address</label>
+            <input type="text" id="address-1" name="address-1">
+            <label for="address-2">Address Line 2</label>
+            <input type="text" id="address-2" name="address-2">
+
           <!-- Create something -->
-            <label>State</label>
-            <input type="dropdown">
-            <label>Postal Code</label>
-            <input type="">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state">
+            <!-- add a regex -->
+            <label type="text" for="zipcode">Postal Code</label>
+            <input type="" id="zipcode" name="zipcode">
 
-          <h3> Card Information </h3>
+          <h4 class="payment__heading"> Card Information </h3>
             <label>Card Number</label>
-            <input type="">
-            <label>Expiration Month/Year</label>
-            <input type="">
+            <input type="" required>
+            <label >Expiration Month/Year</label>
+            <input type="month" required>
             <label>CVV</label>
-            <input type="">
-        </form>
+            <input class="payment__cvv" type="" pattern="[0-9]{3}" required>
 
+        <div class="nav-btns">
+          <button class="option__btn option__btn--back" type="button"> Back </button>
+          <button class="option__btn option__btn--next" type="submit"> Donate</button>
+        </div>
       </section>
+        </section>
+
+    </form>
+  </section>
 
     </main>
+    <!-- End of Main -->
 
+    <!-- footer goes here -->
 
 
   </body>
