@@ -1,3 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+header {
+  background-color: #17556D; 
+}
+
+.tabs__ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 8rem;
+    grid-template-areas: "col1 col2 col3 col4 col5 col6";
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+}
+
+.tabs__li--1{
+  grid-area: col1;
+}
+
+.tabs__li--2{
+  grid-area: col2;
+  font-size: 50px;
+}
+
+.tabs__li--3{
+  grid-area: col3;
+}
+
+.tabs__li--4{
+  grid-area: col4;
+}
+
+.tabs__li--5{
+  grid-area: col5;
+}
+
+.tabs__li--6{
+  grid-area: col6;
+} 
+
+.tabs__li {
+  font-size: 1rem;
+  vertical-align: middle;
+  text-align: center;
+  grid-template-rows: 4rem;
+  vertical-align: middle;
+}
+
+.headerimg__li {
+  vertical-align: bottom;
+  bottom: 30px;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+tabs__li:hover {
+  text-decoration: none;
+  background-color: #D42F2F;
+  color: white;
+;
+}
+
+
 /* Scrolling text banner, add two updates in it */
 .alert-banner {
     font-size: 1.2rem;
@@ -21,6 +100,9 @@
     transform: translateX(-100%); 
   }
 }
+
+
+/* Main image */
 
 .intro__media {
     position: relative;
@@ -61,8 +143,28 @@
 
 }
 
-.newsletter__blogs {
-    display: flex;
-    flex-direction: column nonwrap;
+
+/* Newsletters */
+
+.newsletter__heading {
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: grey;
+   
 }
+
+.newsletter__blogs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 30px;
+}
+
+.newsletter__blogs img {
+  width: 100%;
+  height: 40vh;
+  display: block;
+}
+
+
 
