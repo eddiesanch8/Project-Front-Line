@@ -6,6 +6,7 @@
     <title>Volunteer</title>
     <link rel="stylesheet" href="../css/shared.css" />
     <link rel="stylesheet" href="../css/volunteer.css">
+    <script defer scr="../js/volunteer.js"></script>
   </head>
   <body>
     <header>
@@ -45,12 +46,14 @@
       <section id="form" class="container__section container__section--form">
       <h2 class="contact__form">Contact Information:</h2>
       <form class="volunteer__form" id="volunteer">
-        <input type="text" id="name" name="name" placeholder="First name:"><br>
+        <input type="text" id="name" name="name" placeholder="Full Name:"><br>
         <input type="text" id="email" name="email" placeholder="Email:"><br>
-        <input type="text" id="phone" name="phone" placeholder="Phone Number:"><br>
+        <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number:"><br>
         <input type="submit" value="submit">
       </form>
+      <p id="error" style="color:red"></p>
       </section>
+
 
       <footer class="container__section container__section--footer">
         <p> Contact Info | Social Media Links </p>
