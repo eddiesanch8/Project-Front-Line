@@ -166,17 +166,16 @@ background-color: #D42F2F;
        padding-left: 60%;
 }
 input[type=text]{
-    width: 20rem;
+   width: 20rem;
     height: 3rem;
     padding-right: 10rem;
-    box-shadow: 0 0 25px 8px;
+    box-shadow: 0 0 15px 1px;
     border-radius: .6rem;
     transition: 0.3s color;
-    color: #070f121f;
+    color: darkgray;
     margin-bottom: .2rem;
     background-color: ghostwhite;
     padding: .5rem;
-
 }
 input[type=submit]{
   background-color: #04AA6D;
