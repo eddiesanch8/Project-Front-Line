@@ -119,8 +119,8 @@
 
 .texas__button:hover {
     background-color: whitesmoke;
-    color: #D42F2F;
-    border-color: #D42F2F;
+    color: whitesmoke;
+    border-color: #17556D;
 }
 
 .maillist__section {
@@ -159,7 +159,7 @@ input {
 
 .maillist__button:hover {
     background-color: whitesmoke;
-    color: #D42F2F;
-    border-color:#D42F2F;
+    color: white;
+    border-color:#17556D;
 
 }
