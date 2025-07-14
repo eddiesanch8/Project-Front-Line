@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>donate</title>
     <link rel="stylesheet" href="../css/shared.css" />
-     <link rel="stylesheet" href="../css/donate.css">
+    <link rel="stylesheet" href="../css/donate.css">
+    <script defer src="../js/index.js" ></script>
   </head>
   <body>
 
     
 
     <main class="donate__main">
-
+      
       <header class="hero" >
         <figure class="hero__figure">
           <img class="hero__img" src="" alt="firefighters are helping local communities">
@@ -31,16 +32,11 @@
 
         <!-- This is for choosing your donation  -->
   <section class="donations">
-      <form class="donate__form">
 
-          <section class="donate hidden">
-            <div class="form-tab">
+      <form class="donate__form" id="donateForm">
+
+          <section class="donate form-section active">
               <h2 class="form-tab__donate">Donate</h2> 
-              <h2 class="form-tab__type">Payment Type</h2> 
-              <h2 class="form-tab__details">Payment Details</h2> 
-            </div>
-
-              
               <h3 class="donate__para">Choose a one-time amount</h3>
              
               <div class="donate__group">
@@ -55,43 +51,42 @@
                   <input type="radio" id="amount-500" name="amount" value="500">
                   <label for="amount-500">$500</label>
                 
-                  <input type="radio" id="amount-other" name="amount" pattern="[0-9]{4}">
+                  <input type="radio" name="amount" pattern="[0-9]{4}">
                   <label for="amount-other">Other</label>
-                  <input type="text" id="amount-other" name="otherAmount" pattern="[0-9]{4}">
-
-        
-              <button class="donate__btn donate__btn--next" type="button"> Donate </button>
+                  <input type="number" id="amount-other" name="otherAmount" pattern="[0-9]{4}">
             </div>
+            <button class="option__btn option__btn--next" type="button"> Donate </button>
+
           </section>
 
         <!-- Choosing Form of Payment -->
-      <section class="option hidden">
+      <section class="form-section option hidden" >
 
-          <div class="form-tab">
-            <h2 class="form-tab__donate">Donate</h2> 
             <h2 class="form-tab__type">Payment Type</h2> 
-            <h2 class="form-tab__details">Payment Detials</h2> 
-          </div>
+            <h2 class="form-tab__details">Payment Details</h2> 
 
-          <button class="option__btn" type="button"> Debit </button>
-          <button class="option__btn" type="button"> Paypal </button>
-          <button class="option__btn" type="button"> Google </button>
+          <button class="payment__btn" type="button"> Debit </button>
+          <button class="payment__btn" type="button"> Paypal </button>
+          <button class="payment__btn" type="button"> Google </button>
 
           <div class="nav-btns">
-          <button class="option__btn option__btn--back" type="submit"> Back </button>
-          <button class="option__btn option__btn--next" type="submit"> Continue </button>
+          <button class="option__btn--back option__btn" type="button"> Back </button>
+          <button class="option__btn--next option__btn" type="button"> Continue </button>
           </div>
       </section>
 
         <!-- This is the payment section -->
 
-    <section class="payment ">
+    <section class="form-section payment hidden">
 
 
         <h4 class="payment__heading"> Personal info </h3>
+
+
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" required>
-            <label for="lname">Last Name</label>
+            <input type="text" id="fname" name="fname" minlength="2" required>
+
+            <label for="lname" minlength="2">Last Name</label>
             <input type="text" id="lname" name="lname" required>
             <label for="user-email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" >Email</label>
             <input type="email" id="user-email"required>
@@ -110,12 +105,12 @@
             <input type="" id="zipcode" name="zipcode">
 
           <h4 class="payment__heading"> Card Information </h3>
-            <label>Card Number</label>
-            <input type="" required>
-            <label >Expiration Month/Year</label>
-            <input type="month" required>
-            <label>CVV</label>
-            <input class="payment__cvv" type="" pattern="[0-9]{3}" required>
+            <label for="card-num">Card Number</label>
+            <input type="number" id="card-num" name="card-num" required>
+            <label for="exp-date">Expiration Month/Year</label>
+            <input type="month" id="exp-date" name="exp-date" required>
+            <label for="security-num">CVV</label>
+            <input class="payment__cvv" type="number" pattern="[0-9]{3}" id="security-num" name="security-num" maxlength="3">
 
         <div class="nav-btns">
           <button class="option__btn option__btn--back" type="button"> Back </button>
