@@ -1,3 +1,16 @@
+console.log("im here")
+
+const navClick = document.getElementById("hamburger")
+const links = document.getElementById("myLinks")
+navClick.addEventListener(`click`, ()=>{
+  if(links.style.display === "block") {
+    links.style.display = "none";
+  } else {
+    links.style.display = "block";
+  }
+});
+
+
 // Code for our Form Validation 
 
 // declaring variables for hidden/seen functionality 
