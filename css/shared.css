@@ -1,3 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Use the code below to implement your font stylings  */
+
+ /* <weight>: Use a value from 100 to 900
+H1 and headers (big important text)
+
+.class_name {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
+
+/* <weight>: Use a value from 200 to 1000
+
+Other text 
+.className {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+ */
+
+
+
+
+
 /* Browser Resets */
 
 * {
