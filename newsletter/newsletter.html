@@ -10,78 +10,90 @@
   </head>
 
   <body>
-<!-- Header -->
-<header> 
+  
+    <header class="tabs">
       <nav class="tabs__nav">
         <ul class="tabs__ul">
-          <li class="tabs__li tabs__li--1"><img src="/images/Logo.png" class= "headerimg__li" height="100%" width="100%"></li>
-          <li class="tabs__li tabs__li--2"><a href="index.html">Home</a></li>
-          <li class="tabs__li tabs__li--3"><a href="newsletter/newsletter.html">Newsletter</a></li>
-          <li class="tabs__li tabs__li--4"><a href="about/about.html">About Us</a></li>
-          <li class="tabs__li tabs__li--5"><a href="volunteer/volunteer.html">Volunteer</a></li>
-          <li class="tabs__li tabs__li--6"><a href="donate/donate.html">Donate</a></li>
+          <li class="tabs__li tabs__li--1"><img src="../images/Logo.png" class="tabs__anchor" class= "headerimg__li" height="100%" width="100%"></li>
+          <li class="tabs__li tabs__li--2"><a href="./index.html" class="tabs__anchor">Home</a></li>
+          <li class="tabs__li tabs__li--3"><a href="./newsletter/newsletter.html" class="tabs__anchor">Newsletter</a></li>
+          <li class="tabs__li tabs__li--4"><a href="./about/about.html" class="tabs__anchor">About Us</a></li>
+          <li class="tabs__li tabs__li--5"><a href="./volunteer/volunteer.html"class="tabs__anchor">Volunteer</a></li>
+          <li class="tabs__li tabs__li--6"><a href="./donate/donate.html" class="tabs__anchor">Donate</a></li>
         </ul>
       </nav>
     </header>
 
-<!-- Scrolling Text -->
+  <!-- Scrolling Text -->
     <div class="alert-banner">
       <div class="alert-banner__inner">
-        <span class="alert-banner__inner--message"><strong>Update:</strong> Death toll in Texas flood disaster rises to at least 121</span>
-        <span class="alert-banner__inner--message"><strong>Update:</strong> Death toll in Texas flood disaster rises to at least 121</span>
+        <span class="alert-banner__inner--message"><strong>Update:</strong> Death toll in Texas flood disaster rises to at least 121 <strong>Weather Notice: </strong> Southern California Wildfires Spread in Hot, Dry Conditions</span>
       </div>
      </div>
     </header>
 
-<!-- Large introduction Image -->
+  <!-- Large introduction Image -->
   <section class="intro__media">
       <figure class="intro__figure">
         <img class="intro__img" src="Newsletter Intro Image.jpg" alt="Texas flooding update image">
       </figure>
       <div class="intro__overlay">
-        <figcaption class="intro__caption">Texas flooding death toll rises</figcaption>
-        <a class="intro__readmore" href="https://www.cnn.com/weather/live-news/texas-flooding-camp-mystic-07-10-25">Read More</a>
+        <figcaption class="intro__caption" >Texas flooding death toll rises</figcaption>
+        <button class="intro__readmore" href="https://www.cnn.com/weather/live-news/texas-flooding-camp-mystic-07-10-25">Read More</buton>
       </div>
     </section>
 
+    <!-- Intro heading to newsletter -->
 
     <section class="newsletter__heading">
       <h2 class="newsletter__heading--words"> Our Newsletters</h2>
     </section>
 
-  <!-- Beginning of six articles -->
-    <section class="newsletter__blogs"> 
-      <a class="newsletter__blog  newsletter__blog--1" href="https://www.allhandsandhearts.org/blog/community/the-rising-threat-of-hurricane-season/"><img class="article-img" src="ArticleOne.jpg" alt="Rising Threa of hurrican season">The Rising Threat of Hurricane Season</a>
-      <a class="newsletter__blog  newsletter__blog--2" href="https://www.cnn.com/weather/flash-flood-survival"><img src="ArticleTwo.png" alt="How To Survive A Flash Flood">How To Survive A Flash Flood</a>
-      <a class="newsletter__blog  newsletter__blog--3" href="https://convoyofhope.org/disaster-relief/removing-obstacles-building-bridges-in-ecuador/" ><img src="ArticleThree.jpg" alt="Removing Obstacles & Building Bridges in Ecuador">Removing Obstacles & Building Bridges in Ecuador</a>
-      <a class="newsletter__blog  newsletter__blog--4" href="https://www.projecthope.org/news-stories/story/los-angeles-wildfires-a-visual-timeline/" ><img src="ArticleFour.jpg" alt="Los Angeles Wildfire Timeline">Los Angeles Wildfire Timeline</a>
-      <a class="newsletter__blog  newsletter__blog--5" href="https://monocle.com/affairs/asheville-recovery-post-hurricane-helene/"><img src="ArticleFive.jpg" alt="Ashville's Road to Recovery">Ashville's Road to Recovery</a>
-      <a class="newsletter__blog  newsletter__blog--6" href="https://internationalmedicalcorps.org/story/volunteering-as-a-path-to-healing/"><img src="ArticleSix.png" alt="Volunteering As A Path To Healing">Volunteering As A Path To Healing</a>
-    </section>
+    <!-- Beginning of six articles -->
 
-    <!-- Footer -->
-    <footer class="newsletter__footer">
-      <div class="logo__footer">
-        <img class="logo__footer-image" src=" " alt="Project Front-Line Logo">
+    <section class="newsletter__grid">
+
+      <div class="newsletter__item">
+        <a class="newsletter__title" href="https://www.allhandsandhearts.org/blog/community/the-rising-threat-of-hurricane-season/">
+        <img class="newsletter__img  newsletter__img--1" src="ArticleOne.jpg" alt="Rising Threat of hurrican season">
+        </a>
+        <p>Rising Threat of Hurricane Season</p>
+      </div>        
+
+      <div class="newsletter__item">
+        <a class="newsletter__title" href="https://www.cnn.com/weather/flash-flood-survival">
+        <img class="newsletter__img  newsletter__img--2" src="ArticleTwo.png" alt="How To Survive A Flash Flood">
+        </a>
+        <p>How To Survive A Flash Flood</p>
       </div>
-      <section class="awards__footer">
-        <div class="award__footer1">
-         <img scr="" alt="2022 Best Charity Award">
-        </div>
-        <div class="award__footer2">
-          <img scr="" alt="Charity Watch Top Rated">
-        </div>
-        <div class="award__footer3">
-          <img scr="" alt="Community Choice Awards">
-        </div>
-        <div class="address__footer">
-         <p>1423 Red Ventures Dr<br>
-          Fort Mill, SC 29707<br>
-          Telephone: (704) 971-2300<br>
-          </p>
-         </div>
-     </section>
-    </footer>
 
+      <div class="newsletter__item">
+        <a class="newsletter__title" href="https://convoyofhope.org/disaster-relief/removing-obstacles-building-bridges-in-ecuador/">
+        <img class="newsletter__img  newsletter__img--3" src="ArticleThree.jpg" alt="Removing Obstacles & Building Bridges in Ecuador">
+        </a>
+        <p>Removing Obstacles & Building Bridges in Ecuador</p>
+      </div>
+
+      <div class="newsletter__item">
+        <a class="newsletter__title" href="https://www.projecthope.org/news-stories/story/los-angeles-wildfires-a-visual-timeline/">
+        <img class="newsletter__img  newsletter__img--4" src="ArticleFour.jpg" alt="Los Angeles Wildfire Timeline">
+        </a>
+        <p>Los Angeles Wildfire Timeline</p>
+      </div>
+
+      <div class="newsletter__item">
+        <a class="newsletter__title" href="https://monocle.com/affairs/asheville-recovery-post-hurricane-helene/">
+        <img class="newsletter__img  newsletter__img--5" src="ArticleFive.jpg" alt="Ashville's Road to Recovery">
+        </a>
+        <p>Ashville's Road to Recovery</p>
+      </div>
+
+      <div class="newsletter__item">
+        <a class="newsletter__title" href="https://internationalmedicalcorps.org/story/volunteering-as-a-path-to-healing/">
+        <img class="newsletter__img  newsletter__img--6" src="ArticleSix.png" alt="Volunteering As A Path To Healing">
+        </a>
+        <p>Volunteering As A Path To Healing</p>
+      </div>
+    </section>  
   </body>
 </html>

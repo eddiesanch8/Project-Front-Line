@@ -1,81 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Navbar styling */
-header {
-  background-color: #17556D; 
-}
-
-.tabs__ul {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 8rem;
-    grid-template-areas: "col1 col2 col3 col4 col5 col6";
-    justify-content: space-between;
-    align-items: center;
-    font-size: 50px;
-}
-
-.tabs__li--1{
-  grid-area: col1;
-}
-
-.tabs__li--2{
-  grid-area: col2;
-  font-size: 50px;
-}
-
-.tabs__li--3{
-  grid-area: col3;
-}
-
-.tabs__li--4{
-  grid-area: col4;
-}
-
-.tabs__li--5{
-  grid-area: col5;
-}
-
-.tabs__li--6{
-  grid-area: col6;
-} 
-
-.tabs__li {
-  font-size: 1rem;
-  vertical-align: middle;
-  text-align: center;
-  grid-template-rows: 4rem;
-  vertical-align: middle;
-}
-
-.headerimg__li {
-  vertical-align: bottom;
-  bottom: 30px;
-}
-
-a:link {
-  text-decoration: none;
-  color: white;
-  font-size: large;
-}
-
-a:visited {
-  text-decoration: none;
-  color: white;
-}
-
-tabs__li:hover {
-  text-decoration: none;
-  background-color: #D42F2F;
-  color: white;
-;
-}
-
 
 /* Scrolling text banner, add two updates in it */
 .alert-banner {
@@ -121,6 +43,7 @@ tabs__li:hover {
     height: 75vh;
 }
 
+
 .intro__overlay {
     position: absolute;
     bottom: 0;
@@ -139,8 +62,15 @@ tabs__li:hover {
 
 .intro__readmore {
     font-weight: bold;
-    color: blanchedalmond
+    background-color: #D42F2F;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    color: aliceblue;
+}
 
+.intro__readmore:hover {
+    cursor: pointer;
 }
 
 
@@ -148,23 +78,134 @@ tabs__li:hover {
 
 .newsletter__heading {
     text-align: center;
-    font-size: 1.6rem;
-    background-color: grey;
-   
+    font-size: 2rem;
+    background-color: #17556D;
+    color: #f6b80f;
 }
 
-.newsletter__blogs {
+
+.newsletter__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 10px 30px;
+    padding: 20px;
+    background-image: url("../images/newspaper1.jpg");
 }
 
-.newsletter__blogs img {
-  width: 100%;
-  height: 40vh;
-  display: block;
+.newsletter__item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.newsletter__item p {
+    font-size: 1.4rem;
+    align-self: baseline;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.newsletter__img {
+    max-width: 90%;
+    min-width: 50%;
+    height: auto;
+}
+
+.newsletter__img:hover {
+    cursor: pointer;
+    box-shadow: #17556D;
+}
+
+.newsletter__item p:hover {
+    cursor: pointer;
+    background-color: #f6b80f;
 }
 
 
 
+
+/* 
+
+This style rule will cause whatever code you set within it to be true UNTIL 
+you reach 480px. Use this to have your mobile work well when it is under 480px
+Example: You might want to cause your flexed elements to have the follwing properties:
+
+@media screen and (max-width: 480px){
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+}
+
+This will cause your elements to flow down, stacking on top of each other. 
+NOTE: You don't have to repeat your code if it was already declared earlier in your code. So, 
+
+if you have 
+
+.container{
+    display: flex;
+    font-size: 1rem; 
+    text-align: center;
+}
+
+You don't have to repeat the display:flex ruleset in your media query, since it 
+will have already inhereted those properties earlier! 
+
+Use the following code to make your breakpoint for mobile: 
+these style rules will stay UNTIL you reach 480px: 
+
+*/
+@media screen and (max-width: 480px) { 
+
+
+.newsletter__grid {
+   display:flex;
+   flex-direction: column;
+}
+
+.newsletter__item-container {
+    width: 100%;
+}
+
+.newsletter__img {
+    width: 90vw;
+    height: auto; 
+}
+
+.newsletter__title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+} 
+
+
+
+@media screen and (min-width: 481px) and (max-width:1030px ) {
+
+    .newsletter__grid {
+   display:flex;
+   flex-direction: column;
+}
+
+.newsletter__item-container {
+    width: 100%;
+}
+
+.newsletter__img {
+    width: 90vw;
+    height: auto; 
+}
+
+.newsletter__title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none; 
+}

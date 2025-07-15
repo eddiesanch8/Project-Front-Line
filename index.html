@@ -8,18 +8,35 @@
     <title>Project Front Line</title>
     <link rel="stylesheet" href="css/shared.css" /> 
     <link rel="stylesheet" href="css/homepage.css"/>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
 
     <header class="tabs">
       <nav class="tabs__nav">
         <ul class="tabs__ul">
-          <li class="tabs__li tabs__li--1"><img src="./images/Logo.png" class= "headerimg__li" height="100%" width="100%"></li>
-          <li class="tabs__li tabs__li--2"><a href="./index.html">Home</a></li>
-          <li class="tabs__li tabs__li--3"><a href="./newsletter/newsletter.html">Newsletter</a></li>
-          <li class="tabs__li tabs__li--4"><a href="./about/about.html">About Us</a></li>
-          <li class="tabs__li tabs__li--5"><a href="./volunteer/volunteer.html">Volunteer</a></li>
-          <li class="tabs__li tabs__li--6"><a href="./donate/donate.html">Donate</a></li>
+          <li class="tabs__li tabs__li--1">
+            <div class="topnav" id="myLinks">
+              <a href="../index.html">Home</a>
+              <a href="../newsletter/newsletter.html">Newsletter</a>
+              <a href="../about/about.html">About Us</a>
+              <a href="../volunteer/volunteer.html">Volunteer</a>
+              <a href="../donate/donate.html">Donate</a>
+           </div>
+            
+              <a class="icon" id="hamburger">
+                <i class="fa fa-bars"></i>
+              </a>
+              
+           </div>
+        </li>
+          <li class="tabs__li tabs__li--1"><img src="images/Logo.png" class= "headerimg__li" height="100%" width="100%"></li>
+          <li class="tabs__li tabs__li--2"><a href="index.html">Home</a></li>
+          <li class="tabs__li tabs__li--3"><a href="newsletter/newsletter.html">Newsletter</a></li>
+          <li class="tabs__li tabs__li--4"><a href="about/about.html">About Us</a></li>
+          <li class="tabs__li tabs__li--5"><a href="volunteer/volunteer.html">Volunteer</a></li>
+          <li class="tabs__li tabs__li--6"><a href="donate/donate.html">Donate</a></li>
         </ul>
       </nav>
     </header>
@@ -29,8 +46,8 @@
       <section class="mission__section">
         <!-- Mission statement-->
          <article>
-        <h1 class="mission__h1">PFL's Mission</h1>
-        <p class="mission__p">Project FrontLine's mission is to donate to communities that are impacted by natural disasters, educate others on how they can help & mobilize volunteers & first responders to assist these communities.</p>
+        <h1 class="mission__h1">Project Frontline's Mission</h1>
+        <p class="mission__p">Project Frontline's mission is to donate to communities that are impacted by natural disasters, educate others on how they can help & mobilize volunteers & first responders to assist these communities.</p>
          </article>
       </section>
       <hr class="separate__hr">
@@ -59,19 +76,46 @@
       </section>
       <hr class="separate__hr">
       <section class="maillist__section">
+        <form class="maillist__form" id="mail-list">
         <h2 class="maillist__h2">Join our Mailing List!</h2>
         <p class="maillist__p">Sign Up and Get the Latest Updates.</p>
-        <center><input type="text" class="maillist__input" name="FName" placeholder="First Name: ">
-        <br>
-        <input type="text" class="maillist__input" name="LName" placeholder="Last Name: ">
-        <br>
-        <input type="text" class="maillist__input" name="Email" placeholder="Email Address: ">
-        <button class="maillist__button">Join!</button></center>
-
+          <center><input type="text" class="maillist__input" id="fName" name="fName" placeholder="First Name: ">
+          <input type="text" class="maillist__input" id="lName" name="lName" placeholder="Last Name: ">
+          <input type="text" class="maillist__input" id="email" name="email" placeholder="Email Address: "></center>
+          <center><button class="maillist__button" id="join" type="button" value="join">Join!</button></center>
+        </form>
+        <p id="error-mess" style="color:red"></p>
       </section>
     </main>
     
 
     <!-- <footer></footer><center>&copy; MegaBites</center></footer> -->
+
+    <!-- Footer -->
+    <footer class="web-footer">
+
+      <!-- Awards Section -->
+       <div class="first__section">
+         <img class="award__image award__footer--image1" src="../images/charityaward1.png" alt="Charity Award">
+         <img class="award__image award__footer--image2" src="../images/charityaward2.png" alt="Charity Award">
+         <img class="award__image award__footer--image3" src="../images/charityaward3.png" alt="Charity Award">
+         <img class="award__image award__footer--image4" src="../images/charityaward4.png" alt="Charity Award">
+       </div>
+
+      <!-- Logo section -->
+      <div class="middle__section">
+        <img class="logo__image" src="../images/logo.png" alt="Logo Image">
+      </div>
+
+      <!-- Address Section -->
+      <div class="last__section">
+         <h3 class="last__section-header">CONTACT</h3>
+         <p>1423 Red Ventures Dr<br>
+          Fort Mill, SC 29707<br>
+          Telephone: (704) 971-2300<br>
+          </p>
+      </div>
+    </footer>
+
   </body>
 </html>
