@@ -43,6 +43,7 @@
     height: 75vh;
 }
 
+
 .intro__overlay {
     position: absolute;
     bottom: 0;
@@ -61,8 +62,17 @@
 
 .intro__readmore {
     font-weight: bold;
-    color: blanchedalmond
+    background-color: #D42F2F;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    color: aliceblue;
 }
+
+.intro__readmore:hover {
+    cursor: pointer;
+}
+
 
 /* Newsletters */
 
@@ -71,8 +81,6 @@
     font-size: 2rem;
     background-color: #17556D;
     color: #f6b80f;
-    
-
 }
 
 
@@ -80,20 +88,29 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 20px ;
-
-
+    padding: 20px;
+    background-image: url("../images/newspaper1.jpg");
 }
 
-.newsletter__item-container {
+.newsletter__item {
     width: 100%;
     overflow: hidden;
 }
 
+.newsletter__item p {
+    font-size: 1.4rem;
+    align-self: baseline;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
 
 .newsletter__img {
-    width: 100%;
-    height: 40vh;
+    max-width: 90%;
+    min-width: 50%;
+    height: auto;
 }
 
 .newsletter__img:hover {
@@ -101,12 +118,9 @@
     box-shadow: #17556D;
 }
 
-.newsletter__title {
-    position: relative;
-    padding: 12px 15px;
-    font-weight: bold;
-    font-size: 1rem;
-    color: aquamarine;
+.newsletter__item p:hover {
+    cursor: pointer;
+    background-color: #f6b80f;
 }
 
 
@@ -151,28 +165,47 @@ these style rules will stay UNTIL you reach 480px:
 .newsletter__grid {
    display:flex;
    flex-direction: column;
-
-
 }
 
 .newsletter__item-container {
     width: 100%;
 }
 
-
 .newsletter__img {
-    width: 50%;
+    width: 90vw;
     height: auto; 
 }
 
-    
+.newsletter__title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
 } 
 
 
 
+@media screen and (min-width: 481px) and (max-width:1030px ) {
 
-@media screen and (min-width: 481px) and (max-width:1030px ){
+    .newsletter__grid {
+   display:flex;
+   flex-direction: column;
+}
 
-    
+.newsletter__item-container {
+    width: 100%;
+}
 
+.newsletter__img {
+    width: 90vw;
+    height: auto; 
+}
+
+.newsletter__title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none; 
 }

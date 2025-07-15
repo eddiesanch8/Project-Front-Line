@@ -85,10 +85,7 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: #17556D;
-  
 }
-
-
 
 .first__section {
   display: grid;
@@ -108,60 +105,85 @@
 
 .logo__image {
   height: 250px;
-  width: 200px;
+  width: 380px;
 }
 
 .last__section {
   text-align: center;
-  color: white;
-  font-size: 1rem;
+  color: whitesmoke;
+  font-size: 1.3rem;
 }
 
-/* 
+.last__section-header {
+  color: grey;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
 
-This style rule will cause whatever code you set within it to be true UNTIL 
-you reach 480px. Use this to have your mobile work well when it is under 480px
-Example: You might want to cause your flexed elements to have the follwing properties:
+/* Mobile */
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
 
 .container{
     display: flex;
     flex-direction: column;
 }
 
+.first__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
-This will cause your elements to flow down, stacking on top of each other. 
-NOTE: You don't have to repeat your code if it was already declared earlier in your code. So, 
-
-if you have 
-
-.container{
-    display: flex;
-    font-size: 1rem; 
-    text-align: center;
+.award__image {
+  max-width: 40px;
+  height: auto;
 }
 
-You don't have to repeat the display:flex ruleset in your media query, since it 
-will have already inhereted those properties earlier! 
+.logo__image {
+  height: auto;
+  max-width: 150px;
+}
 
-Use the following code to make your breakpoint for mobile: 
-these style rules will stay UNTIL you reach 480px: 
-
-
-@media screen and (max-width: 480px) { 
-    
-} 
-
-
-This will cause your styles to be visible ONLY for devices who are larger than 480. Once you get below 480, you lose these styles.
-It will also cause your these styles to be lifted once you reach 1030px.  
+.last__section {
+  text-align: center;
+  color: white;
+  font-size: .8rem;
+}
 
 
+
+/* Tablet */
 
 @media screen and (min-width: 481px) and (max-width:1030px ){
 
+.container{
+    display: flex;
+    flex-direction: column;
 }
 
-*/
+.first__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.award__image {
+  max-width: 40px;
+  height: auto;
+}
+
+.logo__image {
+  height: auto;
+  max-width: 150px;
+}
+
+.last__section {
+  text-align: center;
+  color: white;
+  font-size: .8rem;
+}
+
+}
