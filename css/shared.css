@@ -60,18 +60,18 @@
   bottom: 30px;
 }
 
-a:link {
+.tabs__anchor:link {
   text-decoration: none;
   color: white;
   font-size: large;
 }
 
-a:visited {
+.tabs__anchor:visited {
   text-decoration: none;
   color: white;
 }
 
-a:hover {
+.tabs__anchor:hover {
   text-decoration: none;
   background-color: #D42F2F;
   color: white;
@@ -80,20 +80,15 @@ a:hover {
 
 /* Footer Styling */
 
-.footer{
+.web-footer{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: #17556D;
-  height: 250px;
+  
 }
 
-.first__section,
-.middle__section,
-.last__footer, {
-  flex: 1;
-  box-sizing: border-box;
-}
+
 
 .first__section {
   display: grid;
@@ -108,14 +103,12 @@ a:hover {
 }
 
 .middle__section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 300px;
 }
 
 .logo__image {
   height: 250px;
-  width: 230px;
+  width: 200px;
 }
 
 .last__section {
