@@ -21,22 +21,18 @@
         </ul>
       </nav>
     </header>
-
     <main class="donate__main">
-      
-      <header class="hero" >
-        <figure class="hero__figure">
-          <img class="hero__img" src="" alt="firefighters are helping local communities">
-        </figure>
-        <figcaption class="hero__caption">Picture provided by CC</figcaption>
-      </header>
+      <div class="hero" >
+       <!-- Creates Background Image -->
+      </div>
 
+      <div class="background">
       <article class="message">
         <h1 class="message__heading"> Your donation Matters</h1>
         <p class="message__para">The disaster relief fund supports our volunteers and community organizers who are on the front line of these natural disasters. Your contributions over the past 10 years have led to more lives saved, communities rebuilt, and first-responders assisted. </p>
         <p class="message__para message__para--2">Last year alone, we impacted over 2.6 million people. As we enter hurricane season in 2025, it's only with your support that we can impact millions more this year, can we count on you? </p>
       </article>
-
+      </div >
           <!-- Image with a header -->
 
 
@@ -61,11 +57,11 @@
                   <input type="radio" id="amount-500" name="amount" value="500">
                   <label for="amount-500">$500</label>
                 
-                  <input type="radio" name="amount" pattern="[0-9]{4}">
+                  <input type="radio" id="amount-other" name="amount">
                   <label for="amount-other">Other</label>
-                  <input type="number" id="amount-other" name="otherAmount" pattern="[0-9]{4}">
+                  <input type="number" id="other-amount" name="amount" pattern="[0-9]{4}">
             </div>
-            <button class="option__btn option__btn--next" type="button"> Donate </button>
+            <button class="option__btn option__btn--next option__btn--first" type="button"> Donate </button>
 
           </section>
 
@@ -75,9 +71,11 @@
             <h2 class="form-tab__type">Payment Type</h2> 
             <h2 class="form-tab__details">Payment Details</h2> 
 
-          <button class="payment__btn" type="button"> Debit </button>
-          <button class="payment__btn" type="button"> Paypal </button>
-          <button class="payment__btn" type="button"> Google </button>
+        <div class="payment__container">
+          <button class="payment__btn option__btn--next" type="button"> Debit </button>
+          <button class="payment__btn option__btn--next" type="button"> Paypal </button>
+          <button class="payment__btn option__btn--next" type="button"> Google </button>
+        </div>
 
           <div class="nav-btns">
           <button class="option__btn--back option__btn" type="button"> Back </button>
