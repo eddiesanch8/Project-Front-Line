@@ -301,13 +301,14 @@ padding-bottom: 20px;
 }
 
 .error{
-
-    color: red;
-    font-family: "Urbanist", sans-serif;
+    
+    font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 100;
     font-style: normal;
-    padding: 10px 5px;
+    font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
 
 }
 
