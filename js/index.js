@@ -48,11 +48,8 @@ nextBtns.forEach((btn) =>{
     })
 })
 
-
-
 // Event listener for back buttons
 // this logic is the same, except that this time, we check to make sure that formSectionNum is greater than 0
-
 backBtns.forEach((btn) =>{
 
     btn.addEventListener(`click`, () => {
@@ -63,68 +60,72 @@ backBtns.forEach((btn) =>{
             updateVisibility();
         }
         console.log(formSectionNum);
-
     });
+});
+
+
+// declaring variables for donate message and form validation 
+const formSubmit = document.getElementById(`donateForm`);
+const errorMessages = document.querySelectorAll(`.error`)
+
+
+
+formSubmit.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+  const firstName = document.getElementById(`fname`).value.trim();
+  const lastName = document.getElementById(`lname`);
+  const email = document.getElementById(`user-email`);
+  const zip = document.getElementById(`zipcode`);
+  const cvv = document.getElementById(`security-num`);
+
+
+  let errorIndex = 0; 
+
+  errorMessages.forEach((p) => {p.innerText = ""});
+
+  if (firstName.length < 3) {
+    errorMessages[0].innerText = "Name must be at least 2 characters";
+    errorIndex++;
+  }
+
+  if(lastName.length < 3){
+
+    errorMessages[1].innerText = `${errorMessages[0]}! Your name must be at least 2 characters too`
+    errorIndex++;
+  }
+
+  if(zip.length < 5){
+
+    errorMessages[2].innerText= "Invalid Zipcode"
+    errorIndex++;
+  }
+
+  if(cvv.length < 3 ){
+
+    errorMessages[3].innerHTML = "Invalid Security Code"
+    errorIndex++;
+  } 
+
+   if (errorIndex === 0) {
+  const donationAmount = e.target.amount.value;
+  alert(`Thank you for donating $${donationAmount}!`);
+  }
+
 });
 
 
 
 
-// // declaring variables for donate message and form validation 
-// const formSubmit = document.getElementById(`donateForm`);
-// const firstName = document.getElementById(`fname`);
-// const lastName = document.getElementById(`lname`);
-// const email = document.getElementById(`user-email`);
-// // const addressOne = document.getElementsById(`address-1`);
-// // const addressTwo = document.getElementById(`address-2`);
-// // const state = document.getElementById(`state`); 
-// // const zip = docement.getElementById(`zipcode`);
 
 
 
-
-// // donation message for users 
-// formSubmit.addEventListener("submit", (donate) => { 
+// donation message for users 
+formSubmit.addEventListener("submit", (donate) => { 
     
-//     donate.preventDefault();
-//     validateInput();
-
-
-
-// //   const donationAmount = donate.target.amount.value;
-// //   alert(`Thank you for donating $${donationAmount}!`);
-// });
-
-
-// const setError = (element, message) => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error');
-
-//     errorDisplay.innerText = message;
-//     inputControl.classList.add('error');
-//     inputControl.classList.remove('success')
-//     console.log(message)
-// };
-
-// const setSuccess = (element) => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error');
-
-//     errorDisplay.innerText = '';
-//     inputControl.classList.add('success');
-//     inputControl.classList.remove('error');
-// };
-
-
-// const validateInputs = () => {
-//     const firstNameValue = firstName.value.trim();
-//     if(firstNameValue === '') {
-//         setError(firstNameValue, 'Username is required');
-//     } else {
-//         setSuccess(firstName);
-//     }
-
-// }
+    donate.preventDefault();
+  
+});
 
 
 
