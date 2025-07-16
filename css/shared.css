@@ -209,7 +209,7 @@ Other text
 
 @media (min-width: 481px) and (max-width: 1030px) {
   .web-footer {
-    flex-direction: row; /
+    flex-direction: row; 
     padding: 20px;
   }
 
