@@ -1,7 +1,6 @@
 .donate__main{
 
     display: grid;
-    margin-top: 1rem;
     grid-template-rows: 1fr .7fr 2fr;
     grid-template-areas:" banner "
                         " message "
@@ -14,31 +13,50 @@
 .hero{
 
     grid-area: banner;
-    font-size: 1.5rem;
-    background-color: blueviolet;
+    background: blue url("../images/donate-hero-small.jpg") center center; 
+    background-size: cover;
     
 }
 
 
+
+.background{
+
+    width: 85%;
+    grid-area: message;
+    border-radius: .5rem;
+    margin: 1rem auto;
+    padding: .5em;
+    z-index: -1;
+    background-color: #d42f2f;
+}
+
 .message{
     grid-area: message;
-    background-color: bisque;
+    background-color:   #F6B80F;
+    color:  #292929;
     padding: .5em;
+    margin: 1rem auto;
+    border-radius: .5rem;
+    width: 90%;
+    /* box-shadow:  1px 1px 2px 1px #17556D;  */
 }
 
 .message__heading{
     font-size: 1.8rem;
+    color:  #17556D;
+    font:bold;
     text-align: center;
+    
 }
 
 .message__para{
-
-    color:#7a7a7a;
+    color:  #17556D;
 }
 
 .message__para--2{
 
-    color:#7a7a7a;
+    color:  #17556D;
     margin-top:.5rem;
 }
 
@@ -49,15 +67,13 @@
 .donations{
 
     grid-area: donate; 
-    /* background-color: rgba(118, 201, 234, 0.715); */
 
 }
+.donate__form{
 
-/* .donate__form{
+   max-height: 80%;
 
-    display: flex;
-
-} */
+} 
 
 .form-tab{
 
@@ -71,7 +87,7 @@
 
 
 
-/* first form section */
+/* [0] formSection === donate */
 
 .donate{
     display: flex;
@@ -84,6 +100,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     align-items: center;
 }
@@ -95,10 +112,10 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    width: 70%;
+    width: 45%;
     height: 20%;
-    margin: 20px;
-    border: 1px solid #CCC;
+    margin: .3rem;
+    border: 1px solid #7a7a7a;
     padding: 5% 5%;
     cursor: pointer;
     border-radius: 1.2em;
@@ -120,7 +137,7 @@
 
 .donate__group input[type="radio"]:checked + label {
 
-    background-color: rgb(134, 34, 34);
+    background-color: #902424;
 
 }
 
@@ -128,7 +145,7 @@
 
 
 
-/* payment options */
+/* [1] formSection === option */
 .option{
 
     display: flex;
@@ -136,8 +153,6 @@
     margin: 1rem 1rem;
     padding: .5em;
     align-items: center;
-
-
 }
 
 
@@ -150,17 +165,22 @@
 
 }
 
+.option__btn--first{
+
+    width: 50%;
+
+}
+
 
 .option__btn{
     border-style: none;
-    margin-top: .5rem;
-    width: 50%;
+    margin: 10% 15%;
     background-color: white;
     border-radius: .5rem;
     cursor: pointer;
     border: 1px solid #AFAAAA;
     color: #17556D;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -171,18 +191,9 @@
     transform: scale(.97);
 }
 
-.option__btn--back{
 
-    margin: 0 15%;
 
-}
-
-.option__btn--next{
-
-    margin: 0 15%;
-}
-
-/* payment details */
+/* [2] formSection === payment details */
 .payment{
 
     display:flex;
@@ -190,6 +201,27 @@
     margin: 1rem 1rem;
     padding: .5em;
 }
+
+.payment__container{
+
+    display: flex;
+
+}
+
+.payment__btn{
+
+    border-style: none;
+    margin: 2rem;
+    background-color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 1px solid #AFAAAA;
+    color: #17556D;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+
 .payment input{
 
     margin: 10px 0 ; 
@@ -208,6 +240,17 @@
 
 }
 
+.donate__form h2{
+
+    padding: 20px;
+}
+
+.donate__form h3{
+
+    padding: 20px;
+
+
+}
 
 .active{
 
@@ -221,8 +264,121 @@
 }
 
 
-/* 
-@media screen and (min-width:300px){
+@media  screen and (min-width:480px) {
+    
+
+    .hero{
+    grid-area: banner;
+    background: blue url("../images/donate-large.jpg") center center; 
+}
 
 
-} */
+
+.donate__main{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.2fr 1fr;
+    grid-template-areas:" banner banner banner banner"
+                        " message message donate donate"
+    ;
+}
+
+/* For Message on Doantions */
+
+.background{
+   background-color: #ffffff;
+   max-width: 800px;
+}
+
+.message{
+    max-width: 800px;
+    width: 90%;
+    border: #D42F2F solid .5rem;
+    
+}
+.logo__image {
+    height: 250px;
+    width: 100%;
+}
+
+
+.payment__container{
+    flex-direction: column;
+    margin: 1rem 1rem;
+    padding: .5em;
+
+}
+    
+.payment__btn {
+    margin: .8rem;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2px 2rem;
+}
+
+}
+
+
+
+
+@media screen and (min-width:980px) {
+    
+.donate__main{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.2fr .5fr 1.5fr;
+    grid-template-areas:" banner banner banner banner"
+                        " message message message message "
+                        "donate donate donate  donate"
+    ;
+}
+
+.hero{
+    grid-area: banner;
+    background: blue url("../images/donate-hero-large.jpg") center center; 
+    background-size: cover;
+}    
+
+.message{
+    max-width: 80%;
+    width: 80%;
+    border: #D42F2F solid .8rem;
+    
+}
+
+.donate__group{
+    flex-direction: row;
+}
+
+
+.payment__container {
+        flex-direction: row;
+        margin: .5rem;
+    }
+
+
+.donate__group label, 
+.donate__group input
+ {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 12%;
+    height: 20%;
+    margin: 0 auto;
+    border: 3px solid #7a7a7a;
+    padding: 2% 2%;
+    cursor: pointer;
+    border-radius: 1.5em;
+
+
+}
+.payment{
+
+    padding-left: 25%;
+}
+
+}
