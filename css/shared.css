@@ -28,10 +28,6 @@ Other text
 }
  */
 
-
-
-
-
 /* Browser Resets */
 
 * {
@@ -79,7 +75,11 @@ Other text
   color: white;
 }
 
-header {
+/* Navbar Styling */
+
+
+.tabs {
+
   background-color: #17556D; 
 }
 
@@ -153,19 +153,17 @@ header {
   color: white;
 }
 
-a:link {
+.tabs__anchor:link {
   color: white;
   text-decoration: none;
 }
 
-a:visited {
+.tabs__anchor:visited {
   color: white;
     text-decoration: none;
 
-}
-
-
 @media screen and (max-width: 480px){
+
   .tabs__li--2,
   .tabs__li--3,
   .tabs__li--4,
@@ -287,68 +285,63 @@ a:visited {
   text-decoration: underline;
 }
 
-/* Mobile */
+/* Mobile Footer*/
 
-@media screen and (max-width: 480px) {
-
-.container{
-    display: flex;
+@media (max-width: 480px) {
+  .web-footer {
     flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .first__section {
+    grid-template-columns: 1fr; 
+    padding: 20px 0;
+  }
+
+
+  .award__image {
+    max-width: 60px; 
+  }
+
+  .middle__section {
+    max-width: 250px; 
+  }
+  .logo__image {
+    height: 200px; 
+    width: auto; 
+  }
+
+  .last__section {
+    font-size: 1.1rem; 
+  }
 }
 
-.first__section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+/* Tablet Footer */
+
+@media (min-width: 481px) and (max-width: 1030px) {
+  .web-footer {
+    flex-direction: row; 
+    padding: 20px;
+  }
+
+  .first__section {
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  .award__image {
+    max-width: 70px;
+  }
+
+  .middle__section {
+    max-width: 300px; 
+  }
+
+  .logo__image {
+    height: 220px; 
+    width: auto;
+  }
+
+  .last__section {
+    font-size: 1.2rem; 
+  }
 }
-
-.award__image {
-  max-width: 40px;
-  height: auto;
-}
-
-.logo__image {
-  height: auto;
-  max-width: 150px;
-}
-
-.last__section {
-  text-align: center;
-  color: white;
-  font-size: .8rem;
-}
-}
-
-
-/* Tablet */
-
-@media screen and (min-width: 481px) and (max-width:1030px ){
-
-.container{
-    display: flex;
-    flex-direction: column;
-}
-
-.first__section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-}
-
-.award__image {
-  max-width: 40px;
-  height: auto;
-}
-
-.logo__image {
-  height: auto;
-  max-width: 150px;
-}
-
-.last__section {
-  text-align: center;
-  color: white;
-  font-size: .8rem;
-}}
