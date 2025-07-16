@@ -21,6 +21,8 @@
 
 .mission_h1{
     text-align: center;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 800;
 
 }
 
@@ -40,6 +42,8 @@
 .about__para{
     text-align: center;
     padding: 5px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
 }
 
 .about__img{
@@ -64,6 +68,8 @@ margin: auto;
     padding: 10px;
     border-top:solid #AFAAAA 4px;
     font-size: larger;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 900;
 
 }
 
@@ -83,6 +89,8 @@ border-top:  solid#a9a9a9 3px;;
 .staff__para{
     text-align: center;
     border-top:  solid#a9a9a9 2px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
 
 
 
@@ -95,6 +103,10 @@ margin: auto;
 
 
 
+}
+.staff_h2{
+     font-family: "Urbanist", sans-serif;
+    font-weight: 800;
 }
 .staff{
     display: flex;
@@ -134,14 +146,20 @@ display: flex;
     justify-content: center;
     gap: 40px;
     background-color: #F6B80F;
-    
-    border-bottom: solid #D42F2F 5px;
+    border-top:solid #D42F2F 4px;
+    border-bottom: solid #17556D 5px;
      
 
 }
 .partner_h2{
     text-align: center;
     padding: 10px;
+     font-family: "Urbanist", sans-serif;
+    font-weight: 800;
+}
+.partner_para{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
 }
 
 
