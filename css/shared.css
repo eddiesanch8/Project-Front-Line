@@ -43,13 +43,14 @@ Other text
 /* Navbar styling */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #17556D;
   position: relative;
-  display:none;
+  display: none;
+  grid-area: col6;
 }
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
-  display: none;
+  visibility: visible;
 }
 /* Style navigation menu links */
 .topnav a {
@@ -61,7 +62,7 @@ Other text
 }
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: black;
+  background: #17556D;
   display: block;
   position: absolute;
   right: 0;
@@ -69,15 +70,14 @@ Other text
 }
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #17556D;
+  color: #D42F2F
 }
 /* Style the active link (or home/logo) */
 .active-nav {
   background-color: #04AA6D;
   color: white;
 }
-
 
 header {
   background-color: #17556D; 
@@ -92,6 +92,10 @@ header {
     justify-content: space-between;
     align-items: center;
     font-size: 50px;
+}
+
+#hamburger {
+  visibility: hidden;
 }
 
 .tabs__li--1{
@@ -131,6 +135,7 @@ header {
   bottom: 30px;
 }
 
+
 .tabs__anchor:link {
   text-decoration: none;
   color: white;
@@ -148,42 +153,56 @@ header {
   color: white;
 }
 
+a:link {
+  color: white;
+  text-decoration: none;
+}
 
+a:visited {
+  color: white;
+    text-decoration: none;
 
-
-
-
-
-
+}
 
 
 @media screen and (max-width: 480px){
-.tabs__ul {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 5rem;
-    grid-template-areas: "col1 col2 col3 col4 col5 col6";
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-}
-
   .tabs__li--2,
   .tabs__li--3,
   .tabs__li--4,
   .tabs__li--5,
   .tabs__li--6
   {
-    display:none;
+    visibility: hidden;
   }
 
-  .hamburger {
-    display: grid;
-    grid-area: col6;
-    color: white;
-    height: max-content;
+  .tabs__li--drop{
+    grid-area: col2;
   }
+
+  .tabs__li--1{
+  grid-area: col5;
+}
+
+  .topnav {
+    overflow:scroll;
+    background-color: #17556D;
+    padding: 1rem;
+    display: block;
+  }
+
+  .topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display:contents;
+}
+
+
+  #hamburger {
+    visibility: visible;
+    color: white;
+}
 }
 
 @media screen and (max-width: 734px) and (min-width: 481px){
@@ -193,15 +212,37 @@ header {
   .tabs__li--5,
   .tabs__li--6
   {
-    display:none;
+    visibility: hidden;
   }
 
-.hamburger {
-    display: grid;
-    grid-area: col6;
+  .tabs__li--drop{
+    grid-area: col2;
+  }
+
+  .tabs__li--1{
+  grid-area: col5;
+}
+
+  .topnav {
+    overflow:scroll;
+    background-color: #17556D;
+    padding: 1rem;
+    display: block;
+  }
+
+  .topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display:contents;
+}
+
+
+  #hamburger {
+    visibility: visible;
     color: white;
-  }
-
+}
 }
 
 /* Footer Styling */
@@ -277,7 +318,7 @@ header {
   color: white;
   font-size: .8rem;
 }
-
+}
 
 
 /* Tablet */
@@ -310,6 +351,4 @@ header {
   text-align: center;
   color: white;
   font-size: .8rem;
-}
-
-}
+}}
