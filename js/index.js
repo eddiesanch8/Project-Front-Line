@@ -120,14 +120,3 @@ formSubmit.addEventListener("submit", (e) => {
 
 
 
-// donation message for users 
-formSubmit.addEventListener("submit", (donate) => { 
-    
-    donate.preventDefault();
-  
-});
-
-
-
-
-

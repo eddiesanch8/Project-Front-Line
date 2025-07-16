@@ -22,16 +22,15 @@ e.preventDefault();
     errorCount++;
   }
 
-  if(email.innerText = " "){
-
-    errorMsg[1].innerText = "Email is required"
+  if(email.value = " " ){
+    errorMsg[1].innerText = "Email is required"; 
+    errorCount++;
   }
 
   if (phonenumber.length< 9){
-    errorMsg[2].innerText = "Phone number mist be 9 digits"
-
+    errorMsg[2].innerText = "Phone number mist be 9 digits"; 
+    errorCount++;
   }
-
     if (errorCount === 0) {
     alert("No errors, submitting");
 }
