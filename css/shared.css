@@ -161,6 +161,7 @@ Other text
 .tabs__anchor:visited {
   color: white;
     text-decoration: none;
+}
 
 @media screen and (max-width: 480px){
 
